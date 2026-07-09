@@ -1,129 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>CloNode - Cloud Services</title>
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        color: #ffffff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloNode - Cloud Services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0b1020;
+            color: #fff;
+        }
 
-    .page {
-        min-height: 100vh;
-        padding: 40px 60px;
-        background: linear-gradient(135deg, #e8f1ff, #d4e4ff, #c2d8ff, #b0ccff);
-    }
+        .page {
+            min-height: 100vh;
+            padding: 40px 60px;
+            background: radial-gradient(circle at top left, #4b6fff 0%, #0b1020 45%, #090c18 100%);
+        }
 
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 60px;
-    }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
 
-    .hero-text {
-        max-width: 50%;
-    }
+        .logo {
+            font-weight: 700;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
 
-    .hero-text h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-        color: #1a1a1a;
-    }
+        nav a {
+            margin-left: 20px;
+            color: #c9d4ff;
+            text-decoration: none;
+            font-size: 15px;
+        }
 
-    .hero-text p {
-        font-size: 18px;
-        color: #333333;
-        line-height: 1.6;
-    }
+        nav a:hover {
+            color: #ffffff;
+        }
 
-    .hero-button {
-        margin-top: 20px;
-        padding: 12px 24px;
-        background-color: #ff4fa3;
-        color: #ffffff;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-    }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
 
-    .hero-box {
-        width: 40%;
-        padding: 20px;
-        background-color: #ffffff22;
-        border: 2px solid #b38cff;
-        border-radius: 12px;
-        color: #1a1a1a;
-    }
+        .hero-text {
+            max-width: 520px;
+        }
 
-    .hero-box h2 {
-        margin-top: 0;
-        color: #1a1a1a;
-    }
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
 
-    .expertise-section {
-        margin-top: 40px;
-    }
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #c9d4ff;
+            margin-bottom: 30px;
+        }
 
-    .expertise-section h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: #1a1a1a;
-    }
+        .hero-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #ff6fb5;
+            color: #0b1020;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+        }
 
-    .expertise-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
+        .hero-button:hover {
+            background: #ff8bc4;
+        }
 
-    .expertise-card {
-        background-color: #ffffff22;
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid #b38cff;
-        color: #1a1a1a;
-    }
+        .hero-illustration {
+            flex: 1;
+            min-width: 280px;
+            max-width: 480px;
+            background: linear-gradient(135deg, #2b3bff, #9b5bff);
+            border-radius: 24px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+        }
 
-    .expertise-card h3 {
-        margin-top: 0;
-        color: #1a1a1a;
-    }
+        .hero-illustration-inner {
+            width: 100%;
+            height: 260px;
+            border-radius: 18px;
+            background: rgba(9, 12, 24, 0.85);
+            border: 1px solid rgba(201, 212, 255, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #c9d4ff;
+            font-size: 15px;
+        }
 
-    .expertise-card p {
-        color: #333333;
-        line-height: 1.5;
-    }
-</style>
+        .hero-illustration-inner h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .expertise-section {
+            margin-top: 80px;
+        }
+
+        .expertise-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .expertise-section p {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 40px;
+            font-size: 17px;
+            color: #c9d4ff;
+        }
+
+        .expertise-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .expertise-card {
+            background: #11162a;
+            border-radius: 14px;
+            padding: 22px 20px;
+            width: 260px;
+            border: 1px solid #252f4a;
+        }
+
+        .expertise-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .expertise-card p {
+            font-size: 14px;
+            color: #c9d4ff;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 13px;
+            color: #8fa3d8;
+        }
+    </style>
 </head>
-
 <body>
 <div class="page">
+    <header>
+        <div class="logo">CloNode - Cloud Services</div>
+        <nav>
+            <a href="#expertise">What We Do</a>
+            <a href="mailto:Infor@CloNode.com">Contact</a>
+        </nav>
+    </header>
 
-    <div class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="hero-text">
             <h1>Cloud Computing & Modern IT</h1>
             <p>
                 CloNode delivers secure, scalable cloud environments—combining identity, device management,
                 automation, and compliance into one unified cloud operations platform.
             </p>
-            <button class="hero-button">Learn More</button>
+            <a href="#expertise" class="hero-button">Learn More</a>
         </div>
 
-        <div class="hero-box">
-            <h2>Cloud IT Operations</h2>
-            <p>
-                End-user computing, identity, security, automation, and cloud PCs—delivered as a cohesive,
-                well-governed platform.
-            </p>
+        <div class="hero-illustration">
+            <div class="hero-illustration-inner">
+                <h2>Cloud IT Operations</h2>
+                <p>
+                    End‑user computing, identity, security, automation, and cloud PCs—delivered as a cohesive,
+                    well‑governed platform.
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="expertise-section">
+    <!-- EXPERTISE SECTION -->
+    <section id="expertise" class="expertise-section">
         <h2>What We Offer</h2>
+        <p>
+            High‑level cloud IT services designed to modernize your infrastructure, secure your identities,
+            automate operations, and support your workforce.
+        </p>
 
         <div class="expertise-grid">
 
@@ -137,67 +218,48 @@
                 </p>
             </div>
 
-            <!-- INTUNE & JAMF INVENTORY CARD -->
-            <div class="expertise-card">
-                <h3>Intune & Jamf Inventory</h3>
-                <p>
-                    Unified inventory across Intune and Jamf with hardware profiles, OS versions,
-                    compliance insights, encryption status, installed apps, and automated lifecycle reporting.
-                </p>
-            </div>
-
             <div class="expertise-card">
                 <h3>Identity & Access</h3>
-                <p>
-                    Entra ID, Okta, MFA, Conditional Access, RBAC, and SSO integrations.
-                </p>
+                <p>Entra ID, Okta, MFA, Conditional Access, RBAC, SSO integrations.</p>
             </div>
 
             <div class="expertise-card">
                 <h3>Cloud PCs & Automation</h3>
-                <p>
-                    Windows 365 Cloud PCs, scripting, automation, and endpoint governance.
-                </p>
+                <p>Windows 365 Cloud PCs, scripting, automation & endpoint governance.</p>
             </div>
 
             <div class="expertise-card">
                 <h3>Security & Compliance</h3>
-                <p>
-                    SOC2 support, identity protection, encryption, audit readiness.
-                </p>
+                <p>SOC2 support, identity protection, encryption, audit readiness.</p>
             </div>
 
             <div class="expertise-card">
                 <h3>Service Management</h3>
-                <p>
-                    FreshService automation, inventory, workflows, and integrations.
-                </p>
+                <p>FreshService automation, inventory, workflows & integrations.</p>
             </div>
 
             <div class="expertise-card">
                 <h3>App & OS Lifecycle</h3>
-                <p>
-                    Packaging, deployment, patching, and upgrades across all platforms.
-                </p>
+                <p>Packaging, deployment, patching & upgrades across all platforms.</p>
             </div>
 
             <div class="expertise-card">
                 <h3>Cloud Productivity</h3>
-                <p>
-                    Microsoft 365, Exchange, SharePoint, Teams, licensing, and governance.
-                </p>
+                <p>Microsoft 365, Exchange, SharePoint, Teams, licensing & governance.</p>
             </div>
 
             <div class="expertise-card">
                 <h3>Training & Support</h3>
-                <p>
-                    Onboarding, offboarding, device lifecycle, and end-user training.
-                </p>
+                <p>Onboarding, offboarding, device lifecycle & end‑user training.</p>
             </div>
 
         </div>
-    </div>
+    </section>
 
+    <footer>
+        Contact: Infor@CloNode.com  
+        <br>© 2026 CloNode Cloud Services
+    </footer>
 </div>
 </body>
 </html>
